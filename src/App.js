@@ -16,13 +16,13 @@ class App extends Component {
     const count = this.state.count + 1 ;
     let boxStyle;
     if(count %2 === 0 && count%5 === 0){
-      boxStyle={backgroundColor: 'blue', borderTopColor: 'orange'};
-    } else if(count %2 !== 0 && count%5 === 0){
       boxStyle={backgroundColor: 'black', borderTopColor: 'orange'};
+    } else if(count %2 !== 0 && count%5 === 0){
+      boxStyle={backgroundColor: 'blue', borderTopColor: 'orange'};
     } else if(count %2 === 0){
-       boxStyle={backgroundColor: 'blue'}
-    } else if(count %2 !== 0){
        boxStyle={backgroundColor: 'black'}
+    } else if(count %2 !== 0){
+       boxStyle={backgroundColor: 'blue'}
     }
     const box = <div style= {boxStyle} className='box' key={count} id={count}>{count}</div>;
     console.log(count)
